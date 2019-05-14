@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        input[type=text], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          resize: vertical;
+        }
+        
+        label {
+          padding: 12px 12px 12px 0;
+          display: inline-block;
+        }
+        
+        input[type=submit] {
+          background-color: #4CAF50;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          float: right;
+        }
+        
+        input[type=submit]:hover {
+          background-color: #45a049;
+        }
+        
+        .container {
+          border-radius: 5px;
+          background-color: beige;
+          padding: 20px;
+        }
+        
+        .col-25 {
+          float: left;
+          width: 25%;
+          margin-top: 6px;
+        }
+        
+        .col-75 {
+          float: left;
+          width: 75%;
+          margin-top: 6px;
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+          .col-25, .col-75, input[type=submit] {
+            width: 100%;
+            margin-top: 0;
+          }
+        }
+        </style>
+        
+  <title>Twoja strona o podróżach !</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+ <style>
+ 
+  </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark ownNav">
+        <a class="navbar-brand" href="index.html">Twójpodróżnik.pl</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+          
+            <li class="nav-item">
+              <a class="nav-link" href="oferty.html">Oferty</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="dodaj_oferte.html">Dodaj wyprawę</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kontakt.html">Kontakt</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="otworcy.html">O twórcy</a>
+            </li>    
+            
+             
+            </nav>
+          </ul>
+        </div>  
+      </nav>
+
+
+
+
+      <header class="jumbotron text-center" style="margin-bottom:0">
+          <div id="title">
+            <h2>Twójpodróżnik.pl</h2>
+            </div>
+        </header>
+
+
+<h2 style="text-align: center">Dodaj własną wyprawę</h2>
+<p style="text-align: center">Szukasz znajomych do wspólnej podrózy ? Nic trudnego ! Dodaj własną propozycję i czekaj na zgłoszenia.</p>
+
+<div class="container">
+  <form action="/action_page.php">
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">Imię</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="fname" name="firstname" placeholder="Twoję imię..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">Nazwisko</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="lname" name="lastname" placeholder="Twoje nazwisko..">
+    </div>
+  </div>
+
+
+  <div class="row">
+      <div class="col-25">
+        <label for="ftitle">Tytuł</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="ftitle" name="title" placeholder="Podaj tytuł wyjazdu..">
+      </div>
+    </div>
+
+
+  <div class="row">
+    <div class="col-25">
+      <label for="country">Kraj</label>
+    </div>
+    <div class="col-75">
+      <select id="country" name="country">
+          <option value="litwa">Litwa</option>
+          <option value="łotwa">Łotwa</option>
+          <option value="estonia">Estonia</option>
+          <option value="niemcy">Niemcy</option>
+   <option value="czechy">Czechy</option>
+          <option value="austira">Austira</option>
+          <option value="węgry">Węgry</option>
+          <option value="szwajcaria">Szwajcaria</option>
+   <option value="rosja">Rosja</option>
+          <option value="białoruś">Białoruś</option>
+          <option value="ukraina">Ukraina</option>
+          <option value="kazachstan">Kazachstan</option>
+   <option value="Chiny">chiny</option>
+          <option value="japonia">Japonia</option>
+          <option value="korea">Korea</option>
+          <option value="wietnam">Wietnam</option>
+   <option value="chorwacja">Chorwacja</option>
+          <option value="hiszpania">Hiszpania</option>
+          <option value="portugialia">Portugialia</option>
+          <option value="usa">USA</option>
+      </select>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+      <div class="col-25">
+        <label for="fplace">Miejscowość</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fplace" name="place" placeholder="Dodaj miejsce pobytu..">
+      </div>
+    </div>
+
+
+
+
+
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">Opis</label>
+    </div>
+    <div class="col-75">
+      <textarea id="subject" name="subject" placeholder="Dodaj swój opis.." style="height:200px"></textarea>
+    </div>
+  </div>
+
+
+
+
+  <div class="row">
+      <div class="col-25">
+        <label for="fpicture">Dodaj zdjęcie</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fpicture" name="picture" placeholder="Dodaj zdjecie..">
+      </div>
+    </div>
+
+
+
+
+  <div class="row">
+    <input type="submit" value="Potwierdź zgłoszenie" id="btn1">
+  </div>
+  </form>
+</div>
+
+
+
+<footer class="cos" >
+
+    <p>&copy Wszelkie prawa zastrzeżone, 2019 <br /> Wykonane przez: Rafał Walasek
+    </p>
+</footer>
+
+<script>
+  $(document).ready(function(){
+    $("#btn1").click(function(){
+      alert("Twoje zgłoszenie zostało dodane" + $("#test").text());
+    });
+   
+  });
+  </script>
+
+</body>
+</html>

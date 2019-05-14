@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Twoja strona o podróżach !</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      #myInput {
+        background-image: url('/css/searchicon.png');
+        background-position: 10px 12px;
+        background-repeat: no-repeat;
+        width: 40%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+
+      }
+      
+      #myUL {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      #myUL li a {
+        border: 1px solid #ddd;
+        margin-top: -1px; /* Prevent double borders */
+        background-color: #f6f6f6;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: block
+      }
+      
+      #myUL li a:hover:not(.header) {
+        background-color: #eee;
+      }
+      </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark ownNav">
+        <a class="navbar-brand" href="index.html">Twójpodróżnik.pl</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+          
+            <li class="nav-item">
+              <a class="nav-link" href="oferty.html">Oferty</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="dodaj_oferte.html">Dodaj wyprawę</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kontakt.html">Kontakt</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="otworcy.html">O twórcy</a>
+            </li>    
+            
+             
+            </nav>
+          </ul>
+        </div>  
+      </nav>
+
+
+
+      <header class="jumbotron text-center" style="margin-bottom:0">
+          <div id="title">
+            <h2>Twójpodróżnik.pl</h2>
+            </div>
+        </header>
+
+
+
+<div class="ownMainPart" style="padding: 50px; margin: 80px;"  >
+    <div class="row">
+      <div class="col">
+<h2 style="text-align: center">Wyszukiwarka ofert</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Szukaj ofert.." title="Type in a name">
+</div>
+</div> 
+</div>
+
+
+
+<ul id="myUL">
+    <li><a href="#">Alpy</a></li>
+    <li><a href="#">Szanghaj</a></li>
+  
+    <li><a href="#">Barcelona</a></li>
+    <li><a href="#">Nevada</a></li>
+  
+    <li><a href="#">Caracas</a></li>
+    <li><a href="#">Mahajanga</a></li>
+    <li><a href="#">Nairobi</a></li>
+  </ul>
+
+
+<footer class="cos" >
+
+    <p>&copy Wszelkie prawa zastrzeżone, 2019 <br /> Wykonane przez: Rafał Walasek
+    </p>
+</footer>
+
+
+<script>
+    function myFunction() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+    </script>
+</body>
+</html>
