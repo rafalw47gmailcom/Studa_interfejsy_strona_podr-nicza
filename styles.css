@@ -5,8 +5,9 @@
     text-decoration: none;
     background-size:100%;
     height:50px;
-    position: sticky;
+  
     top: 0;
+    color: rgb(100, 89, 53);
     /*
     rgb(38, 47, 75)
     */
@@ -14,6 +15,7 @@
 nav li a:hover{
     font-size: 130%;
 }
+
 header{
   
     background-image: url("../images/mountains.jpg");
